@@ -1,0 +1,119 @@
+p,
+h1,
+h2,
+h3,
+form {
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+h3 {
+    padding: 4px;
+    color: #00807e;
+    font-size: 24px;
+    font-weight: 500;
+    border-bottom: 3px solid #00807e;
+}
+
+
+.editor-block {
+    padding: 60px 90px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 12px;
+}
+
+.form-froup {
+    label {
+        margin-right: 30px;
+        color: #00807e;
+        font-weight: 400;
+        width: 25%;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 8px 12px;
+        background-color: #FAFAFA;
+        color: #818a91;
+        font-weight: 200;
+        border: 0;
+        border-bottom: 1px solid #00807E;
+    }
+
+}
+
+.result-area {
+    background: #F7F7F7;
+}
+
+.filter-row {
+
+    select,
+    p {
+        color: #818a91;
+        font-weight: 200;
+    }
+
+    select {
+        border: 1px solid #CED4DA;
+        border-radius: 4px;
+        padding: 8px 12px;
+        width: 30%;
+    }
+
+}
+
+.card {
+    position: relative;
+    box-shadow: 0px 3px 6px #00000029;
+    border: 1px solid #DEE2E6;
+    border-radius: 4px;
+    margin-bottom: 38px;
+    height: 470px;
+
+    .tag-location,
+    .tag-rank {
+        position: absolute;
+        font-weight: 200;
+        color: white;
+        border-radius: 2px;
+    }
+
+    .tag-location {
+        font-size: 20px;
+        top: -10px;
+        background-color: #64c3bf;
+        padding: 8px 20px;
+    }
+
+    .tag-rank {
+        top: -16px;
+        left: 0;
+        background-color: #00807e;
+        padding: 8px;
+    }
+
+    img {
+        height: 180px;
+    }
+
+    .description {
+        color: #818a91;
+        line-height: 1.5;
+        font-weight: 200;
+        margin-bottom: auto;
+
+    }
+
+    .price-block {
+        color: #00807E;
+        p.price {
+            font-size: 32px;
+        }
+    }
+}
