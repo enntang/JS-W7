@@ -39,6 +39,7 @@ function chartData() {
         newData.push(ary)
     })
     console.log(newData);
+
     //渲染 C3 chart
     const chart = c3.generate({
         bindto: '#chart',
@@ -48,10 +49,19 @@ function chartData() {
             type: 'donut',
             onclick: function (d, i) { console.log("onclick", d, i); },
             onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-            onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+            onmouseout: function (d, i) { console.log("onmouseout", d, i); },
+            colors: {
+                '高雄': '#E68618',
+                '台北': '#26BFC7',
+                '台中': '#5151D3'
+            }
         },
         donut: {
-            title: "套票地區比重"
+            title: "套票地區比重",
+            width: 15,
+            label: {
+                show: false
+            }
         }
     });
 }
