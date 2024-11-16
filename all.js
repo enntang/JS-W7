@@ -1,5 +1,5 @@
 
-  
+
 //定義文件中的關鍵位置
 const selector = document.querySelector("#location-selector");
 const resultNum = document.querySelector("#resultNum");
@@ -70,6 +70,8 @@ addDataBtn.addEventListener("click", function () {
 
     // 清空表單欄位
     form.reset();
+    // 重新渲染 C3 chart
+    chartData();
 });
 
 
@@ -102,20 +104,3 @@ selector.addEventListener("change", function () {
     filterData();
 });
 
-// C3 chart
-const chart = c3.generate({
-    bindto: '#chart',
-    data: {
-        columns: [
-            ['data1', 30],
-            ['data2', 120],
-        ],
-        type : 'donut',
-        onclick: function (d, i) { console.log("onclick", d, i); },
-        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-    },
-    donut: {
-        title: "套票地區比重"
-    }
-});
