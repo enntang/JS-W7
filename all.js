@@ -1,12 +1,4 @@
-let data = [];
-axios.get('https://raw.githubusercontent.com/hexschool/js-training/main/travelApi.json')
-    .then(function (response) {
-        data = response.data.data;
-        renderData(data);
-    })
-    .catch(function(error){
-        console.log(error.message)
-    });
+
   
 //定義文件中的關鍵位置
 const selector = document.querySelector("#location-selector");
@@ -108,4 +100,22 @@ function filterData() {
 //監聽selector，當使用者改變（change）選項時，觸發function
 selector.addEventListener("change", function () {
     filterData();
+});
+
+// C3 chart
+const chart = c3.generate({
+    bindto: '#chart',
+    data: {
+        columns: [
+            ['data1', 30],
+            ['data2', 120],
+        ],
+        type : 'donut',
+        onclick: function (d, i) { console.log("onclick", d, i); },
+        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+    },
+    donut: {
+        title: "套票地區比重"
+    }
 });
